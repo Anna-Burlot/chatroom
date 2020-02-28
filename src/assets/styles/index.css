@@ -1,4 +1,4 @@
-@import 'reset';
+@import "reset";
 
 body {
   background-color: #123456;
@@ -48,13 +48,13 @@ body {
   margin-top: 1rem;
   display: inline-block;
   border-radius: 2rem;
-  position:relative;
+  position: relative;
   min-width: 100px;
-  animation: pop 0.3s cubic-bezier(.48,1.7,.87,1);
+  animation: pop 0.3s cubic-bezier(0.48, 1.7, 0.87, 1);
 }
 
 .message-content::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 100%;
   left: 2rem;
@@ -82,4 +82,20 @@ body {
   width: 80px;
   background: none;
   border: 0;
+}
+
+#pseudo-form {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  padding: 0.6rem;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+#pseudo-form input {
+  height: 2rem;
+  width: 10rem;
+  border: 1px solid #77a0ca;
+  padding: 0.7rem;
 }

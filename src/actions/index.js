@@ -1,13 +1,24 @@
 // == action types
-export const ADD_MESSAGE = 'ADD_MESSAGE';
-export const MODIFY_MESSAGE = 'MODIFY_MESSAGE';
+export const ADD_MESSAGE = "ADD_MESSAGE";
+export const MODIFY_MESSAGE = "MODIFY_MESSAGE";
+export const CHANGE_PSEUDO = "CHANGE_PSEUDO";
+export const CHANGE_CURRENT_AUTHOR = "CHANGE_CURRENT_AUTHOR";
 
 // == action creators
 export const addMessage = () => ({
-  type: ADD_MESSAGE,
+  type: ADD_MESSAGE
 });
 
-export const modifyMessage = (message) => ({
+export const modifyMessage = message => ({
   type: MODIFY_MESSAGE,
-  content: message,
+  content: message
+});
+
+export const changePseudo = pseudo => ({
+  type: CHANGE_PSEUDO,
+  pseudo
+});
+
+export const changeCurrentAuthor = () => ({
+  type: CHANGE_CURRENT_AUTHOR
 });
