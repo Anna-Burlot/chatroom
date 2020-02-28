@@ -2,7 +2,8 @@ import {
   ADD_MESSAGE,
   MODIFY_MESSAGE,
   CHANGE_PSEUDO,
-  CHANGE_CURRENT_AUTHOR
+  CHANGE_CURRENT_AUTHOR,
+  CHANGE_IS_DISPLAYED_FORM
 } from "src/actions";
 import { getNextId } from "src/selectors";
 
@@ -10,6 +11,7 @@ const initialState = {
   newMessageValue: "",
   newAuthorValue: "",
   currentAuthor: "Super Chat",
+  isDisplayedForm: false,
   messages: [
     {
       id: 1,
@@ -70,6 +72,11 @@ const reducer = (state = initialState, action = {}) => {
         newAuthorValue: ""
       };
     }
+    case CHANGE_IS_DISPLAYED_FORM:
+      return {
+        ...state,
+        isDisplayedForm: action.isDisplayedForm
+      };
     default:
       return state;
   }

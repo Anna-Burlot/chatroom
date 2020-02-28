@@ -86,7 +86,7 @@ body {
 
 #pseudo-form {
   position: absolute;
-  top: 20px;
+  top: 70px;
   right: 30px;
   padding: 0.6rem;
   background-color: #fff;
@@ -98,4 +98,10 @@ body {
   width: 10rem;
   border: 1px solid #77a0ca;
   padding: 0.7rem;
+}
+
+#toggle-pseudo-form-div {
+  position: absolute;
+  top: 30px;
+  right: 30px;
 }
