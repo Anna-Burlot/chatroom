@@ -75,7 +75,7 @@ const reducer = (state = initialState, action = {}) => {
     case CHANGE_IS_DISPLAYED_FORM:
       return {
         ...state,
-        isDisplayedForm: action.isDisplayedForm
+        isDisplayedForm: !state.isDisplayedForm
       };
     default:
       return state;

@@ -5,12 +5,12 @@ import Form from "src/containers/Form";
 import PseudoForm from "src/containers/PseudoForm";
 import TogglePseudoFormButton from "src/containers/TogglePseudoFormButton";
 
-const Chat = () => (
+const Chat = ({ isDisplayedForm }) => (
   <div id="chatroom">
     <Messages />
     <Form />
     <TogglePseudoFormButton />
-    <PseudoForm />
+    {isDisplayedForm ? <PseudoForm /> : ""}
   </div>
 );
 

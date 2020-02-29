@@ -7,7 +7,11 @@ const mapStateToProps = state => ({
   isDisplayedForm: state.isDisplayedForm
 });
 
-const mapDispatchToProps = null;
+const mapDispatchToProps = dispatch => ({
+  changeIsDisplayedForm: () => {
+    dispatch(changeIsDisplayedForm());
+  }
+});
 
 export default connect(
   mapStateToProps,

@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const TogglePseudoFormButton = ({ isDisplayedForm }) => {
+const TogglePseudoFormButton = ({ isDisplayedForm, changeIsDisplayedForm }) => {
   const handleClick = () => {
-    console.log(isDisplayedForm);
+    changeIsDisplayedForm();
   };
   return (
     <div id="toggle-pseudo-form-div">
@@ -21,7 +21,8 @@ const TogglePseudoFormButton = ({ isDisplayedForm }) => {
 };
 
 TogglePseudoFormButton.propTypes = {
-  isDisplayedForm: PropTypes.bool.isRequired
+  isDisplayedForm: PropTypes.bool.isRequired,
+  changeIsDisplayedForm: PropTypes.func.isRequired
 };
 
 export default TogglePseudoFormButton;

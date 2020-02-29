@@ -24,7 +24,8 @@ export const changeCurrentAuthor = () => ({
   type: CHANGE_CURRENT_AUTHOR
 });
 
-export const changeIsDisplayedForm = isDisplayedForm => ({
-  type: CHANGE_IS_DISPLAYED_FORM,
-  isDisplayedForm
-});
+export const changeIsDisplayedForm = () => {
+  return {
+    type: CHANGE_IS_DISPLAYED_FORM
+  };
+};
