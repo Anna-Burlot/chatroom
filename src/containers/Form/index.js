@@ -1,21 +1,20 @@
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 
-import Form from 'src/components/Form';
-import { addMessage, modifyMessage } from 'src/actions';
+import Form from "src/components/Form";
+import { addMessage, modifyMessage } from "src/actions";
 
-const mapStateToProps = (state) => ({
-  value: state.newMessageValue,
+const mapStateToProps = state => ({
+  value: state.newMessageValue
 });
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = dispatch => ({
   addMessage: () => {
     dispatch(addMessage());
   },
-  changeValue: (newValue) => {
-    // const action = { type: 'CHANGE_MESSAGE', content: newValue };
+  changeValue: newValue => {
     const action = modifyMessage(newValue);
     dispatch(action);
-  },
+  }
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Form);

@@ -1,10 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const PseudoForm = ({ changeCurrentAuthor, value, changeValue }) => {
+const PseudoForm = ({
+  changeCurrentAuthor,
+  value,
+  changeValue,
+  changeIsDisplayedForm
+}) => {
   const handleSubmit = event => {
     event.preventDefault();
     changeCurrentAuthor();
+    changeIsDisplayedForm();
   };
 
   const handleChange = event => {
@@ -26,7 +32,8 @@ const PseudoForm = ({ changeCurrentAuthor, value, changeValue }) => {
 PseudoForm.propTypes = {
   changeCurrentAuthor: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,
-  changeValue: PropTypes.func.isRequired
+  changeValue: PropTypes.func.isRequired,
+  changeIsDisplayedForm: PropTypes.func.isRequired
 };
 
 export default PseudoForm;

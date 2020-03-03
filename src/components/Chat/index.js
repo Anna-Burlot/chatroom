@@ -10,7 +10,7 @@ const Chat = ({ isDisplayedForm }) => (
     <Messages />
     <Form />
     <TogglePseudoFormButton />
-    {isDisplayedForm ? <PseudoForm /> : ""}
+    {isDisplayedForm && <PseudoForm />}
   </div>
 );
 

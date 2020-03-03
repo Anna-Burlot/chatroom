@@ -9,11 +9,11 @@ const TogglePseudoFormButton = ({ isDisplayedForm, changeIsDisplayedForm }) => {
     <div id="toggle-pseudo-form-div">
       {isDisplayedForm ? (
         <button onClick={handleClick} type="button" id="hide-form">
-          Hide Form
+          Hide
         </button>
       ) : (
         <button onClick={handleClick} type="button" id="show-form">
-          Show Form
+          Change Pseudo
         </button>
       )}
     </div>

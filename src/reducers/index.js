@@ -22,16 +22,6 @@ const initialState = {
       id: 2,
       author: "Super Chat",
       content: "Ça va ?"
-    },
-    {
-      id: 3,
-      author: "Super Chat",
-      content: "a+"
-    },
-    {
-      id: 4,
-      author: "Super Chat",
-      content: "Bisous !"
     }
   ]
 };
@@ -59,19 +49,17 @@ const reducer = (state = initialState, action = {}) => {
         ...state,
         newMessageValue: action.content
       };
-    case CHANGE_PSEUDO: {
+    case CHANGE_PSEUDO:
       return {
         ...state,
         newAuthorValue: action.pseudo
       };
-    }
-    case CHANGE_CURRENT_AUTHOR: {
+    case CHANGE_CURRENT_AUTHOR:
       return {
         ...state,
         currentAuthor: state.newAuthorValue,
         newAuthorValue: ""
       };
-    }
     case CHANGE_IS_DISPLAYED_FORM:
       return {
         ...state,
